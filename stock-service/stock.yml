@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    password: null
+    url: jdbc:h2:mem:testdb
+    username: sa
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+  application:
+    name: STOCK-PRICE-SERVICE
+  boot:
+    admin:
+      client:
+        url: http://localhost:8056
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        
